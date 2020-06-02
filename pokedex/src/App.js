@@ -1,12 +1,15 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Pokemon from "./components/pokemon";
+import store from "./redux/store";
+import { Provider } from "react-redux";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <>
-      <h1>Hola Mundo!</h1>
-    </>
+    <Provider store={store}>
+      <Pokemon />
+    </Provider>
   );
 }
 
